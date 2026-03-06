@@ -85,7 +85,7 @@ if (empty($ricerca)) {
                         name="cognome" 
                         placeholder="Inserisci cognome..." 
                         value="<?php echo htmlspecialchars($ricerca); ?>"
-                    >
+                    >   
                     <button type="submit" class="btn-search">🔍 Cerca</button>
                     <a href="dati.php" class="btn-reset">↻ Resetta</a>
                 </form>

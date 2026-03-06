@@ -21,6 +21,25 @@ CREATE TABLE persone (
     data_inserimento TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- ============================================================================
+-- TABELLA TELEFONI (collegata a persone)
+-- ============================================================================
+
+DROP TABLE IF EXISTS telefoni;
+
+CREATE TABLE telefoni (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    persona_id INT NOT NULL,
+    numero VARCHAR(20) NOT NULL,
+    tipo VARCHAR(20) NOT NULL,
+    data_inserimento TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_telefoni_persona
+        FOREIGN KEY (persona_id)
+        REFERENCES persone(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 
 -- ============================================================================
@@ -32,6 +51,12 @@ INSERT INTO persone (nome, cognome, email) VALUES
 ('Anna', 'Bianchi', 'anna.bianchi@email.com'),
 ('Giovanni', 'Verdi', 'giovanni.verdi@email.com'),
 ('Laura', 'Neri', 'laura.neri@email.com');
+
+INSERT INTO telefoni (persona_id, numero, tipo) VALUES
+(1, '3331112233', 'Cellulare'),
+(1, '0299887766', 'Casa'),
+(2, '3475551122', 'Cellulare'),
+(3, '051334455', 'Ufficio');
 
 -- ============================================================================
 -- ISTRUZIONI PER L'USO:

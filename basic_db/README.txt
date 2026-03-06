@@ -9,6 +9,8 @@ CARATTERISTICHE:
 - Connessione MySQL semplice
 - PHP procedurale con MySQLi
 - Tre funzioni base: visualizzare, aggiungere, cercare
+- Estensione con seconda tabella collegata via chiave esterna
+- Select HTML creata dinamicamente con PHP
 - Senza CSS o layout complessi
 - Tabella HTML semplice per i risultati
 
@@ -19,6 +21,9 @@ FILE:
 - ricerca.php: Ricerca persone per cognome (SELECT WHERE LIKE)
 - database.sql: Script per creare il database e la tabella
 - index.php: Homepage con menu di navigazione
+- telefoni_dati.php: Visualizza i telefoni con JOIN su persone
+- telefoni_form.php: Aggiunge un telefono scegliendo la persona da select dinamica
+- telefoni_ricerca.php: Ricerca telefoni per numero e/o persona
 
 COME INIZIARE:
 1. Assicurati che XAMPP sia avviato (Apache + MySQL)
@@ -33,6 +38,9 @@ CONCETTI INSEGNATI:
 - Prepared Statements per sicurezza (prevenzione SQL Injection)
 - mysqli_bind_param per passare parametri in sicurezza
 - Gestione dei risultati con mysqli_fetch_assoc
+- Relazioni tra tabelle con chiavi esterne (FOREIGN KEY)
+- JOIN tra tabelle in SQL
+- Generazione dinamica di una select HTML da risultati DB
 - HTML forms con metodo POST
 - Array e cicli PHP
 

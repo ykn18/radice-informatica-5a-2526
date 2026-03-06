@@ -28,7 +28,7 @@ mysqli_close($conn);
 <body>
     <h1>Elenco Persone</h1>
     
-    <p><a href="index.php">&lt; Torna alla home</a></p>
+    <p><a href="index.php?nome=carlo">&lt; Torna alla home</a></p>
     
     <table border="1" cellpadding="10">
         <tr>
@@ -53,7 +53,7 @@ mysqli_close($conn);
         }
         ?>
     </table>
-    
+
     <p><strong>Totale persone:</strong> <?php echo count($persone); ?></p>
 </body>
 </html>
